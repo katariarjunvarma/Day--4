@@ -1,0 +1,43 @@
+#include <iostream>
+#include <iomanip> // For setting precision
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter first integer: ";
+    std::cin >> num1;
+
+    std::cout << "Enter second integer: ";
+    std::cin >> num2;
+
+    // Addition
+    int addition = num1 + num2;
+    std::cout << "Addition: " << addition << std::endl;
+
+    // Subtraction
+    int subtraction = num1 - num2;
+    std::cout << "Subtraction: " << subtraction << std::endl;
+
+    // Multiplication
+    int multiplication = num1 * num2;
+    std::cout << "Multiplication: " << multiplication << std::endl;
+
+    // Division
+    if (num2 != 0) {
+        double division = static_cast<double>(num1) / num2;
+        std::cout << std::fixed << std::setprecision(5); // Set precision for division result
+        std::cout << "Division: " << division << std::endl;
+    } else {
+        std::cout << "Division: Undefined (division by zero)" << std::endl;
+    }
+
+    // Modulus
+    if (num2 != 0) {
+        int modulus = num1 % num2;
+        std::cout << "Modulus: " << modulus << std::endl;
+    } else {
+        std::cout << "Modulus: Undefined (division by zero)" << std::endl;
+    }
+
+    return 0;
+}
